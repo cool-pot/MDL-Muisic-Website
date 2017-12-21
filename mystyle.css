@@ -1,0 +1,226 @@
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('./assets/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.demo-card-square.mdl-card {
+  width: 512px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background:
+    url('./assets/dog.png') bottom right 15% no-repeat #46B6AC;
+}
+
+
+
+.demo-layout-transparent {
+  background: url('../assets/transparent.jpg') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+.demo-card-event.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: #b83e3e;
+}
+.demo-card-event > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.demo-card-event > .mdl-card__title {
+  align-items: flex-start;
+}
+.demo-card-event > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.demo-card-event > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.demo-card-event > .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+.demo-card-event > .mdl-card__title,
+.demo-card-event > .mdl-card__actions,
+.demo-card-event > .mdl-card__actions > .mdl-button {
+  color: #fff;
+}
+
+
+.demo-card-success.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: #3eb842;
+}
+.demo-card-success > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.demo-card-success > .mdl-card__title {
+  align-items: flex-start;
+}
+.demo-card-success > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.demo-card-success > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.demo-card-success > .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+.demo-card-success > .mdl-card__title,
+.demo-card-success > .mdl-card__actions,
+.demo-card-success > .mdl-card__actions > .mdl-button {
+  color: #fff;
+}
+
+.demo-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  
+}
+
+
+
+.demo-card-profile.mdl-card {
+  width: 672px;
+}
+.demo-card-profile > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('./assets/profile.png') center / cover;
+}
+.demo-card-profile > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.demo-card-taste.mdl-card {
+  width: 672px;
+}
+.demo-card-taste > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background:
+    no-repeat #000;
+}
+
+.demo-card-res.mdl-card {
+  width: 672px;
+}
+.demo-card-res > .mdl-card__title {
+  height: 36px;
+}
+
+
+.demo-list-icon {
+  width: 300px;
+}
+
+
+.demo-card-search.mdl-card {
+  width: 672px;
+}
+.demo-card-search > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background:
+    url('./assets/music.png') bottom right 10% no-repeat #000;
+  background-size:25% 75%;
+}
+
+
+.demo-card-play.mdl-card {
+  width: 672px;
+}
+.demo-card-play > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background:
+    url('./assets/play.png') bottom right 15% no-repeat #000;
+}
+
+.demo-card-feed.mdl-card {
+  width: 672px;
+}
+.demo-card-feed > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background:
+    url('./assets/doge.png') bottom right 10% no-repeat #000;
+  background-size:35% 105%;
+}
+
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}

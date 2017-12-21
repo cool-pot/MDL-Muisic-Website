@@ -1,0 +1,52 @@
+/* Chrome, Safari, Opera */
+@-webkit-keyframes follow-animation {
+  from {background: white; color: #3399FF; width: 85px; left: 50px;}
+  to {background: #2EB82E; border-color: #2EB82E; color: #ffffff; width: 120px; left: 35px;}
+}
+@-webkit-keyframes unfollow-animation {
+  from {background: #2EB82E; color: #ffffff; width: 120px; left: 35px;}
+  to {background: white; border-color: #3399FF; color: #3399FF; width: 85px; left: 50px;}
+}
+
+/* Standard syntax */
+@keyframes follow-animation {
+  from {background: white; color: #3399FF; width: 85px; left: 50px;}
+  to {background: #2EB82E; border-color: #2EB82E; color: #ffffff; width: 120px; left: 35px;}
+}
+@keyframes unfollow-animation {
+  from {background: #2EB82E; color: #ffffff; width: 120px; left: 35px;}
+  to {background: white; border-color: #3399FF; color: #3399FF; width: 85px; left: 50px;}
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+input:after {
+  color: #3399FF;
+  font-family: "Helvetica";
+  font-size: 10pt;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #3399FF;
+  border-radius: 3px;
+  cursor: hand;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 15px;
+
+
+  content: '+ Follow';
+  -webkit-animation: unfollow-animation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-animation-fill-mode:forwards;
+  animation: unfollow-animation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode:forwards;
+}
+
+input:checked:after {
+  content: 'Following';
+  -webkit-animation: follow-animation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-animation-fill-mode:forwards;
+  animation: follow-animation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode:forwards;
+}	
