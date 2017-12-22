@@ -1,4 +1,4 @@
-# DB-Project: A Music Web Site
+# MDL-Muisic-Website: A Music Website
 
 A functional music-website, based on MySql and PHP. Using Material Design Lite for UI.
 
