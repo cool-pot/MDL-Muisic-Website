@@ -1,7 +1,12 @@
 # DB-Project: A Music Web Site
 
-## Content List
+A functional music-website, based on MySql and PHP. Using Material Design Lite for UI.
 
+Multiple users can signed up, signed in, search, follow other users, update profiles, manage playlists,etc .. and of course enjoy music here.
+
+Support Concurency Control, Security and Recommendation.
+
+## Content List
 
 1. Project-File-Structure
 
@@ -358,7 +363,7 @@ To the implementing persepective, it's simple.
 
 Select the related infomation according to the Session's username. And output the information into the page.
 
-###search.php
+### search.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/search.png?raw=true)
 
