@@ -1,8 +1,6 @@
 # DB-Project: A Music Web Site
 
-Name:Yi Zhou, Time:2017/12/14 , N19759444, yz4029
-
-##Content List
+## Content List
 
 
 1. Project-File-Structure
@@ -19,7 +17,7 @@ Name:Yi Zhou, Time:2017/12/14 , N19759444, yz4029
  - 3.6 Extra Features
 
 
-##Project-File-Structure
+## Project-File-Structure
 
 1. PHP+HTML+CSS
 	- 1.1 assets: some pics used in the project
@@ -46,9 +44,9 @@ Name:Yi Zhou, Time:2017/12/14 , N19759444, yz4029
 Note that, there should also be track folder in order to make this site work(I download 40 tracks in my machine, they are too big to be uploaded).  Also, the insert operations of User table in the `build-schema.sql` is not the right way, because actually we only store encrypted password.
 
 
-##Database
+## Database
 
-###1.Database Design
+### 1.Database Design
 
 **ER Diagram as follows:**
 
@@ -83,7 +81,7 @@ The source and desc record that how users get accessed to a particular track. Us
 
 * The rating score of a track  by a user should be in {1,2,3,4,5}.
 
-###2.Corresponding relational tables, and constraints
+### 2.Corresponding relational tables, and constraints
 
 *Relational Tables:*
 
@@ -157,9 +155,9 @@ Almost all of the attributes are required to be **NOT NULL**. The only exception
 
 
 
-##Web-Based User Interface
+## Web-Based User Interface
 
-###Signup.php and Signin.php
+### Signup.php and Signin.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/signup&signin.png?raw=true)
 
@@ -217,7 +215,7 @@ redirect("feed.php");
 ~~~
 
 
-###Feed.php
+### Feed.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/feed.png?raw=true)
 signup&signin.png
@@ -351,7 +349,7 @@ END//
 DELIMITER ;
 ~~~
 
-###musictaste.php
+### musictaste.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/musictaste.png?raw=true)
 In this page, user can get ti know their liked artist, rated songs and followees.
@@ -420,7 +418,7 @@ if ($result->num_rows > 0) {
     }
 ~~~
 
-###manage_playlist.php
+### manage_playlist.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/manage_playlist.png?raw=true)
 
@@ -464,7 +462,7 @@ END//
 DELIMITER ;
 ~~~
 
-###Browse the site: play.php
+### Browse the site: play.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/play.png?raw=true)
 
@@ -560,7 +558,7 @@ DELIMITER ;
 ~~~
 
 
-###Browse the site: user.php
+### Browse the site: user.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/user.png?raw=true)
 
@@ -601,7 +599,7 @@ DELIMITER ;
 
 
 
-###Browse the site: artist.php
+### Browse the site: artist.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/artist.png?raw=true)
 
@@ -690,19 +688,19 @@ DELIMITER ;
 ~~~
 
 
-###Browse the site: album.php
+### Browse the site: album.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/album.png?raw=true)
 
 From implementing perspective, it's trivial. Just select the infomation according to albumid.
 
-###Browse the site: playlist.php
+### Browse the site: playlist.php
 
 ![](https://github.com/cool-pot/MDL-Muisic-Website/blob/master/screenshots/playlist.png?raw=true)
 
 From implementing perspective, it's trivial. Just select the infomation according to playlistid.
 
-###Deal with requests: data_manager.php
+### Deal with requests: data_manager.php
 
 This php file deal with all the XMLHttpRequest. 
 
@@ -717,7 +715,7 @@ A typical pattern like this.
 
 
 
-###User Friendly Feedbacks
+### User Friendly Feedbacks
 
 To give user friendly-feed backs. I classify the interactions into 4 class.
 
@@ -742,14 +740,14 @@ I implement it this way, because it works and easy to implement. A pure AJAX way
 For adding a track into playlist, after get a response, user will know what's the result of this operation and not reload the page. Because user can be listening to the music, this operetion should not annoy the user by reloading the page.
 
 
-###Privacy
+### Privacy
 
 Some playlist are marked private. 
 
 Such playlist won't be displayed in the "feed" or "search" page of any user. But its owner can manage the private playlist in its own manage_playlist page.
 
 
-###Security
+### Security
 
 * Against SQL Injection
  
@@ -828,7 +826,7 @@ http.onreadystatechange = function() {//Call a function when the state changes.
   }
 ~~~
 
-###Concurrency
+### Concurrency
 
 The concurrency of this website is assured by two part.
 
@@ -837,7 +835,7 @@ The concurrency of this website is assured by two part.
 2. All modifications of database are written into transactions. If there is more than one actions to be done, a exception handler will be created in that transaction, and ROLLBACK when necessary. The details can be seen in the `transactions.sql`
 
 
-###Extra Feature
+### Extra Feature
 
 * token
 
