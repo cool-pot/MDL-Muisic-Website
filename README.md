@@ -1,5 +1,7 @@
 # MDL-Muisic-Website: A Music Website
 
+It's the final project for database course in my 2017 fall semester in NYU.
+
 A functional music-website, based on MySql and PHP. Using Material Design Lite for UI.
 
 Multiple users can signed up, signed in, search, follow other users, update profiles, manage playlists,etc .. and of course enjoy music here.
